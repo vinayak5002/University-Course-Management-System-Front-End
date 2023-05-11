@@ -7,24 +7,22 @@
   <link rel="stylesheet" type="text/css" href="../styles/style.css">
   <title>Login</title>
   
-<style>
-body {
-background-color: #000;
-overflow: hidden;
-}
-
-
-</style>
+  <style>
+    body {
+      background-color: #000;
+      overflow: hidden;
+    }
+  </style>
 
 </head>
 <body>
   <div id="particles-js"></div>
-<div id="animation"></div>
-<div class="login-box">
-  <h2>Login</h2>
-    <form action="target-page.html" method="get">
+  <div id="animation"></div>
+  <div class="login-box">
+    <h2>Login</h2>
+    <form>
       <div class="user-box">
-        <select name="usertype">
+        <select id="usertype" name="usertype">
           <option value="student">Student</option>
           <option value="faculty">Faculty</option>
           <option value="admin">Admin</option>
@@ -38,16 +36,9 @@ overflow: hidden;
         <input type="password" name="password" required="">
         <label>Password</label>
       </div>
-      <a href="./dashboard.html">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        Submit
-      </a>
-	  <br>
-        <a href="./forgot_password.html">Forgot Password?</a>
-
+      <button id="submit-btn">Submit</button>
+      <br>
+      <a href="./forgot_password.html">Forgot Password?</a>
     </form>
     <script src="../javascript/particles.js"></script>
     <script>
@@ -55,25 +46,19 @@ overflow: hidden;
       const userTypeSelect = document.getElementById("usertype");
 
       submitBtn.addEventListener("click", (event) => {
-          event.preventDefault();
+        event.preventDefault();
 
-          const userType = userTypeSelect.value;
-          if (userType === "student") {
-              window.location.href = "./dashboard.html";
-          } else if (userType === "faculty") {
-              window.location.href = "faculty_dashboard.html";
-          } else if (userType === "admin") {
-              window.location.href = "./admin_dashboard.html";
-          }
+        const userType = userTypeSelect.value;
+        console.log(userType);
+        if (userType === "student") {
+          window.location.href = "./dashboard.html";
+        } else if (userType === "faculty") {
+          window.location.href = "./faculty_dashboard.html";
+        } else if (userType === "admin") {
+          window.location.href = "./admin_dashboard.html";
+        }
       });
-  </script>
-</div>
-
+    </script>
+  </div>
 </body>
 </html>
-
-
-
-
-
-
