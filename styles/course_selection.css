@@ -1,0 +1,15 @@
+
+  
+  header h1 {
+    background-color: blue;
+    margin-right: auto;
+    padding: 5px;
+  }
+  
+  header .form-group,
+  header .form-check,
+  header .btn-primary {
+    background-color: white;
+    color: black;
+  }
+  
