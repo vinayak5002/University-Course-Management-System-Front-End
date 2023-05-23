@@ -152,6 +152,9 @@ body {
   overflow: hidden;
   overflow-y: scroll;
 }
+.card1::-webkit-scrollbar {
+  display: none;
+}
 .card2 {
   width: 50%;
 }
